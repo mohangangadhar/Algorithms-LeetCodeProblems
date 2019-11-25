@@ -10,7 +10,7 @@ class Node {
 public class ReverseLinkedList {
 
     public static void main(String... args) {
-        Node val = createNewLinkedList(5);
+        Node val = createNewLinkedList(100);
         printLinkedList(val);
         Node reversedList = reverseLinkedList(val);
         System.out.println("--- Reversed Linked List ---");
@@ -45,7 +45,17 @@ public class ReverseLinkedList {
     }
 
     // Reverse a Linked list and return the list
+    // Step 1: Create three Nodes, namely current, next and previous
+    // Step 2: Initialize current to the head, next and previous to null
+    // Step 3: Point next to the node next to current
+    // Step 4: Point current node's next to previous
+    // Step 5: Move previous to current node
+    // Step 6: Move current to next
+    // Step 7: continue from step 3 to 6 until current is null
+
     public static Node reverseLinkedList(Node val) {
+        if (val == null) throw new IllegalArgumentException("Invalid input");
+
         Node curr = val;
         Node prev = null;
         Node next = null;
