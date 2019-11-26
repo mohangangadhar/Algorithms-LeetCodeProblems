@@ -1,3 +1,10 @@
+/*
+ * Author: Mohan Gangadhar Gudey
+ * Date: November 25, 2019
+ * Description: Validate if the passed in parenthesis is valid or not
+ * LeetCode problem no: 20
+ */
+
 import java.util.Stack;
 
 public class ValidParenthesis {
@@ -17,11 +24,11 @@ public class ValidParenthesis {
         char[] chars = val.toCharArray();
 
         for (char ch : chars) {
-            if(stack.isEmpty()){
+            if (stack.isEmpty()) {
                 stack.push(ch);
-            } else if(stack.peek().equals(getOppositeParenthesis(ch))){
+            } else if (stack.peek().equals(getOppositeParenthesis(ch))) {
                 stack.pop();
-            }else {
+            } else {
                 stack.push(ch);
             }
         }

@@ -1,3 +1,10 @@
+/*
+ * Author: Mohan Gangadhar Gudey
+ * Date: November 24, 2019
+ * Description: Reverse a Linked list
+ * LeetCode problem no: 206
+ */
+
 class Node {
     int val;
     Node next = null;
