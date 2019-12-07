@@ -33,15 +33,15 @@ public class LongestSubstringWithoutRepeatingCharacters {
 
     public static void main(String... args) {
         Validate validate = new Validate();
-        validate.assertThat(3, calculateLength("abcabcbb"));
-        validate.assertThat(1, calculateLength("bbbbb"));
-        validate.assertThat(3, calculateLength("pwwkew"));
-        validate.assertThat(2, calculateLength("au"));
-        validate.assertThat(1, calculateLength(" "));
-        validate.assertThat(0, calculateLength(""));
-        validate.assertThat(1, calculateLength("aa"));
-        validate.assertThat(1, calculateLength("a"));
-        validate.assertThat(2, calculateLength("abba"));
+        validate.assertInt(3, calculateLength("abcabcbb"));
+        validate.assertInt(1, calculateLength("bbbbb"));
+        validate.assertInt(3, calculateLength("pwwkew"));
+        validate.assertInt(2, calculateLength("au"));
+        validate.assertInt(1, calculateLength(" "));
+        validate.assertInt(0, calculateLength(""));
+        validate.assertInt(1, calculateLength("aa"));
+        validate.assertInt(1, calculateLength("a"));
+        validate.assertInt(2, calculateLength("abba"));
     }
 
 // Step 1: Have two pointers, begin and end
@@ -72,15 +72,5 @@ public class LongestSubstringWithoutRepeatingCharacters {
             curMax = Math.max(curMax, i - windowStart);
         }
         return curMax;
-    }
-}
-
-class Validate {
-
-    public void assertThat(int expected, int actual) {
-        if (expected == actual)
-            System.out.println("Passed");
-        else
-            System.out.println("Failed");
     }
 }
