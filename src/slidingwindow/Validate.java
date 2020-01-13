@@ -16,4 +16,10 @@ public class Validate {
             System.out.println("Failed");
     }
 
+    public void assertBoolean(boolean expected, boolean actual){
+        if (expected == actual)
+            System.out.println("Passed");
+        else
+            System.out.println("Failed");
+    }
 }
