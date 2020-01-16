@@ -1,15 +1,15 @@
-public class fibonacci {
+public class Fibonacci {
     public static void main(String... args) {
-        long start = System.currentTimeMillis();
-        System.out.println(fib(40));
-        long finish = System.currentTimeMillis();
-        long timeElapsed = finish - start;
-        System.out.println(timeElapsed);
+//        long start = System.currentTimeMillis();
+//        System.out.println("fibonacci "+fib(120));
+//        long finish = System.currentTimeMillis();
+//        long timeElapsed = finish - start;
+//        System.out.println("Time took to run "+ timeElapsed);
         long start1 = System.currentTimeMillis();
-        System.out.println(fibDy(40));
+        System.out.println("fibonacci " + fibDy(12000));
         long finish1 = System.currentTimeMillis();
         long timeElapsed1 = finish1 - start1;
-        System.out.println(timeElapsed1);
+        System.out.println("Time took to run "+ timeElapsed1);
     }
 
     static int fib(int n) {
